@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/default">
+        <file>icons/document.png</file>
+        <file>icons/folder.png</file>
+        <file>icons/cross.png</file>
+        <file>icons/disk.png</file>
+        <file>icons/document-copy.png</file>
+        <file>icons/scissors-blue.png</file>
+        <file>icons/document-text.png</file>
+        <file>icons/arrow-000-medium.png</file>
+        <file>icons/disks.png</file>
+        <file>icons/document-hf-delete.png</file>
+        <file>icons/document-hf-insert.png</file>
+        <file>icons/folder--arrow.png</file>
+        <file>icons/gear.png</file>
+        <file>icons/images-stack.png</file>
+        <file>icons/information.png</file>
+        <file>icons/printer.png</file>
+        <file>icons/printer-empty.png</file>
+        <file>icons/question.png</file>
+        <file>icons/wrench-screwdriver.png</file>
+        <file>icons/arrow-return-180-left.png</file>
+        <file>icons/arrow-return.png</file>
+        <file>icons/arrow-180-medium.png</file>
+        <file>icons/clipboard-paste.png</file>
+        <file>icons/binocular.png</file>
+        <file>icons/edit-replace.png</file>
+        <file>icons/home.png</file>
+        <file>icons/light-bulb.png</file>
+        <file>icons/layout-design.png</file>
+        <file>icons/layout-hf.png</file>
+        <file>icons/layout-split.png</file>
+        <file>icons/layout-split-vertical.png</file>
+        <file>icons/application-export.png</file>
+        <file>icons/application--plus.png</file>
+        <file>icons/bug.png</file>
+        <file>icons/application.png</file>
+        <file>icons/highlighter-text.png</file>
+        <file>icons/briefcase.png</file>
+        <file>icons/briefcase--arrow.png</file>
+        <file>icons/briefcase--minus.png</file>
+        <file>icons/briefcase--plus.png</file>
+        <file>icons/application-split.png</file>
+        <file>icons/application-split-tile.png</file>
+        <file>icons/application-split-vertical.png</file>
+    </qresource>
+</RCC>

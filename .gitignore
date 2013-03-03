@@ -11,3 +11,7 @@
 *.lai
 *.la
 *.a
+
+dialog.ui
+settings.ui
+mainwindow.ui

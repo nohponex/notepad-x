@@ -1,0 +1,10 @@
+//CREATE EXTERNAL WINDOWS VECTOR
+// ADD EACH WINDOW
+//CREATE MENU MOVE TO WINDOW -> 
+// AND DISPLAY ANY EXTERNAL WINDOW THERE
+
+//RECENT
+
+Settings/General / Encoding - Default language - Recent documents - Auto back up
+Settings / Style,Icons,Downloads,Languages,Autocompete
+PROJECTS
