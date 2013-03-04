@@ -72,5 +72,5 @@ win32 {
 win32:debug {
     CONFIG  += console
 }
-CONFIG += release
-CONFIG += static
+#CONFIG += release
+#CONFIG += static

@@ -454,13 +454,9 @@ void SettingsDialog::shortcuts_edit_buttons_restore_defaults(){
     for(int i=0 ; i< shortcuts_table->rowCount();i++  ){
         shortcuts_table->item( i,1)->setText("");
     }
-    for(int i=0 ; i<defaults->count();i++  ){
-        qDebug() << defaults->at(i).first;
-        qDebug() << defaults->at(i).second;
-        qDebug() << shortcuts_table->item(defaults->at(i).first ,1)->text();
+    for(int i=0 ; i<defaults->count();i++  ){       
         shortcuts_table->item( (int)defaults->at(i).first ,1)->setText( defaults->at(i).second );
     }
-    //delete defaults;
 }
  void SettingsDialog::cellChanged(int x,int y){
      qDebug() << x << y;
