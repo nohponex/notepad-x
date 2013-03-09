@@ -50,6 +50,7 @@
 //#include <Documents/testdocument.h>
 #include <QPropertyAnimation>
 
+#include <QDesktopWidget>
 //TO REMOVE
 #include <QtWidgets/QLineEdit>
 MainWindow* MainWindow::s_instance = 0;
@@ -97,6 +98,18 @@ void MainWindow::setup_main_window(){
     QSettings settings("NohponeX", "Notepad X");
 
     move( settings.value("position", QPoint(200, 200)).toPoint() );
+    QDesktopWidget *desktop = QApplication::desktop();
+    int count =  desktop->screenCount();
+    for( int i=0 ; i< desktop->screenCount() ;i ++){
+        qDebug()<< desktop->screenGeometry(i).left();
+        if( this->pos().x() > desktop->screenGeometry(i).left(  )){
+            //found = true ;
+            break;
+        }else if( i+1 == count  ){
+            move( QPoint(200, 200) );
+        }
+    }
+    qDebug()<< "POINT"  << settings.value("position", QPoint(200, 200)).toPoint();
 
     resize( settings.value("size", QSize(400, 400)).toSize() );
 
