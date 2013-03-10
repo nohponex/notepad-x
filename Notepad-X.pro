@@ -56,10 +56,10 @@ HEADERS  += mainwindow.h \
 RESOURCES += \
     Icons.qrc
 
-FORMS += \
-    dialog.ui \
-    mainwindow.ui \
-    settings.ui
+#FORMS += \
+    #dialog.ui \
+    #mainwindow.ui \
+    #settings.ui
 
 OTHER_FILES += \
     Todo.txt \
