@@ -397,7 +397,7 @@ void SettingsDialog::shortcuts_table_selection_changed(  int x, int y,int px, in
     shortcuts_edit_shift->setChecked( shortcut.contains( "shift" ) );
     shortcuts_edit_alt->setChecked( shortcut.contains( "alt" ) );
     shortcut.replace( "shift+","").replace( "ctrl+","").replace( "alt+","");
-    int index = shortcuts_edit_key->findText(shortcut);
+    int index = shortcuts_edit_key->findText(shortcut, Qt::MatchFixedString );
 
     shortcuts_edit_key->setCurrentIndex(index);
     shortcuts_edit_buttons->button( QDialogButtonBox::Apply )->setEnabled( true );
