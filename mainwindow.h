@@ -131,6 +131,9 @@ private slots:
     void layout_addRow();
     void layout_addCol( int row );
     void layout_default();
+    void layout_grid();
+    void layout_split();
+    void layout_splitVertical();
 
     void file_templatesAboutToShow();
     void file_recentAboutToShow();

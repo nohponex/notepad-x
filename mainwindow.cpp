@@ -247,10 +247,13 @@ void MainWindow::setup_main_window(){
     connect(Actions[ MainWindow::action_layout_default ], SIGNAL(triggered()), this, SLOT(layout_default()));
     //Layout Split
     Actions[ MainWindow::action_layout_split ] = new QAction( *iconpack::instance()->get_icon( iconpack::icon_layout_split ) ,"Split",this);
+    connect(Actions[ MainWindow::action_layout_split ], SIGNAL(triggered()), this, SLOT(layout_split()));
     //Layout Split Vertical
     Actions[ MainWindow::action_layout_splitVertical ] = new QAction( *iconpack::instance()->get_icon( iconpack::icon_layout_splitVertical ) ,"Split Vertical",this);
+    connect(Actions[ MainWindow::action_layout_splitVertical ], SIGNAL(triggered()), this, SLOT(layout_splitVertical()));
     //Layout Grid
     Actions[ MainWindow::action_layout_grid ] = new QAction( *iconpack::instance()->get_icon( iconpack::icon_layout_grid ) ,"Grid",this);
+    connect(Actions[ MainWindow::action_layout_grid ], SIGNAL(triggered()), this, SLOT(layout_grid()));
     //Console
     Actions[ MainWindow::action_console ] = new QAction( *iconpack::instance()->get_icon( iconpack::icon_console ) ,"Console",this);
     connect(Actions[ MainWindow::action_console ], SIGNAL(triggered()), this, SLOT(view_console()));
@@ -1168,6 +1171,15 @@ void MainWindow::layout_default(){
     }
     change_selected_tab( 0 );
     //selected_tab_control = tab_widget_0;
+}
+void MainWindow::layout_grid(){
+
+}
+void MainWindow::layout_split(){
+
+}
+void MainWindow::layout_splitVertical(){
+
 }
 
 void MainWindow::layout_addCol() {
