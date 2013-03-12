@@ -10,6 +10,7 @@
 #include <QStringListModel>
 #include <QtWidgets/QHBoxLayout>
 #include <QPropertyAnimation>
+#include <QKeyEvent>
 Console::Console( QWidget * parent ): QFrame( parent ,Qt::Tool | Qt::Window | Qt::FramelessWindowHint)
 {
     qDebug() << "Open console";

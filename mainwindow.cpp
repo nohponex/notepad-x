@@ -76,7 +76,7 @@ MainWindow::MainWindow() : QMainWindow(0){
     findReplace_dialog = 0 ;
 
     setAcceptDrops( true );
-    this->setWindowOpacity( 0 );
+    //this->setWindowOpacity( 0 ); //effect
     //setup_main_window();
 }
 void MainWindow::setup_main_window(){
@@ -539,22 +539,19 @@ void MainWindow::setup_main_window(){
     }
 
     this->setWindowIcon( *iconpack::instance()->get_icon( iconpack::icon_new ) );
-
+    /*
     QPropertyAnimation *animation = new QPropertyAnimation(this,"windowOpacity");
     animation->setDuration(500);
     animation->setStartValue(0.0);
     animation->setEndValue(1.0);
     animation->setEasingCurve(QEasingCurve::InExpo);
-    animation->start();
+    animation->start();*/
 }
 
 void MainWindow::file_new(){
-    //qDebug() << "NEW " << selected_tab_control;
     if( !selected_tab_control ){
         selected_tab_control = tab_widget_0;
     }
-    //qDebug() << "NEW " << selected_tab_control << (selected_tab_control == tab_widget_0);
-
     const QString tab_text =  QString("Doc %1").arg( document_index+1 );
     selected_tab_control -> addTab( dynamic_cast<QWidget*>( IDocument::createByType(0 ,&tab_text, document_index++, selected_tab_control )  ) , tab_text );
 
@@ -562,17 +559,11 @@ void MainWindow::file_new(){
     dynamic_cast<QWidget*>(selected_tab)->setFocus();
 }
 void MainWindow::file_open(){
-    QStringList fileNames = QFileDialog::getOpenFileNames(this,"Open files");
-    //if ( !fileNames.isEmpty() ){
-    //for( int i=0;i<fileNames.length() ;i++){
-      //  qDebug()<< fileNames.at(i);
-       // file_open( fileNames.at(i) );
-//}
+    QStringList fileNames = QFileDialog::getOpenFileNames(this, "Open files" );
+
     foreach( const QString &fileName, fileNames  ){
-            file_open( fileName );
-            qDebug() <<fileName;
+        file_open( fileName );
     }
-    //}
 }
 void MainWindow::file_open( QString fileName ){
     if( !selected_tab ){
@@ -1058,12 +1049,6 @@ void MainWindow::show_tabs_contextMenu(const QPoint& point)
 {
     selected_tab_control = (TabWidgetX*)sender();
     selected_tab = selected_tab_control->currentWidget();
-    qDebug() << point;
-    qDebug() << selected_tab;
-    qDebug() << "AT" << selected_tab_control->childAt( point );
-    //selected_tab_control->tabA
-    qDebug() << selected_tab_control->indexOf( selected_tab_control->childAt( point ) );
-
     tabs_contextMenu->exec( QCursor::pos() );
 }
 void MainWindow::set_selected_tab( ){
@@ -1295,6 +1280,7 @@ void MainWindow::tabs_moveToWindow(){
     }else{
 
         TabWidgetX *preSelected  = selected_tab_control;
+        qDebug() << "parent" << preSelected->parent()->parent()->parent();
         bool pre_selected_saved =  dynamic_cast<IDocument*>(selected_tab)->get_saved();
         int newIndex = external_windows[ index ]->tabControl->count();
 

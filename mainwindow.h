@@ -23,7 +23,7 @@ class QActionGroup;
 class Console;
 QT_END_NAMESPACE
 //delete
-#include <QKeyEvent>
+//#include <QKeyEvent>
 
 class MainWindow : public QMainWindow
 {
@@ -196,13 +196,13 @@ public slots:
     void edit_redo_available( bool value );
     */
 
-    void keyPressEvent(QKeyEvent *e)
+    /*void keyPressEvent(QKeyEvent *e)
     {
          // Do something
 
          // Otherwise pass to the graphics view
         qDebug()<< e->key() << (  e->key() == Qt::Key_Escape ) ;
-    }
+    }*/
 
 };
 
